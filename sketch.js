@@ -1,12 +1,13 @@
 
 //$1056 an hour
 //0.2933333333 dollars a second
-
+let infobutton;
 var dollarsASecond = 1056/3600; //0.2933333333;
 
 var colorArray = ['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', '#ffffff', '#000000']
 var mapN
 var Crafts = []
+var CraftData = []
 var polylines = []
 var jData
 var geoJson;
@@ -244,6 +245,15 @@ function setup(){
 
 	frameRate(10)
 	createCanvas(windowWidth, 150)
+
+infobutton= createButton("Info")
+infobutton.position(100,10)
+infobutton.style('z-index', 2001)
+infobutton.style('font-size','x-large;')
+
+  infobutton.mousePressed(function(){
+  	select("#info").toggleClass('hidden')
+  });
 
 	clickedRange = [0,width]
 		 mapN = L.map('mapView').setView([34.0406929,-118.3120699], 12);

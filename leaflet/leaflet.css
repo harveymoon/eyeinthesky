@@ -3,6 +3,20 @@
 height:calc(100vh - 150px);
 }
 
+.hidden { 
+	display:none
+}
+#info{
+	position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 2001;
+    width: 400px;
+    color: white;
+    padding: 50px;
+    background: black;
+}
+
 
 #dollarCost{
 	
